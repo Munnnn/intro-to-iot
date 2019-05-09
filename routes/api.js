@@ -3,7 +3,7 @@ var express			=require('express'),
 	db				=require('../models'),
 	dataHelpers		=require('../helpers/data'),
 	statsHelpers	=require('../helpers/stats'),
-	settngsHelpers	=require('../helpers/settings');
+	settingsHelpers	=require('../helpers/settings');
 
 /*****
 * C -- Creat
@@ -24,8 +24,8 @@ router.route('/data/:id')
 	.delete(dataHelpers.deleteOneData);
 
 router.route('/setting')
-	.get(settngsHelpers.getSettings)
-	.put(settngsHelpers.editSettings)
+	.get(settingsHelpers.getSettings)
+	.put(settingsHelpers.editSettings)
 
 router.route('/statistics')
 	.get(statsHelpers.getStats)
