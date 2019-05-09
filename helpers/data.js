@@ -1,13 +1,12 @@
-var db = require('../models');
+var express = require('express'),
+	db = require('../models');
 
 exports.getData = function(req, res) {
 	db.Data.find()
 	.then( function(data) {
-		// res.json( { message: 'creaating data'})
 		res.json(data);
 	})
-	.catach( function(err) {
-		// res.json( { message: 'error'})
+	.catch( function(err) {
 		res.send(err);
 	})
 }
@@ -48,7 +47,7 @@ exports.getOneDate = function(req, res) {
 exports.editData = function(req, res) {
 	db.Data.findOneAndUpdate({ _id: req.params.id}, req.body, {'new': true, upsert: true})
 	.then (function(editedData) {
-		res.json(foundData);
+		res.json(editedData);
 	})
 	.catch( function(err) {
 		res.send(err);
@@ -57,7 +56,7 @@ exports.editData = function(req, res) {
 
 exports.delectOneData = function(req, res) {
 	db.Data.remove( {_id: req.params.id})
-	.then (function() {
+	.then ( function() {
 		res.json( { message: 'Succesfully deleted'})
 	})
 	.catch( function(err) {
