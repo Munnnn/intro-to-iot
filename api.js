@@ -20,18 +20,20 @@ app.use('/', indexRoutes);
 
 
 
+app.get('/api/data', (req,res) => {
+	res.send("hello world!");
+});
 
 
+// app.route('/api/data')
+// 	.get(dataHelpers.getData)
+// 	.post(dataHelpers.createData)
+// 	.delete(dataHelpers.deleteData);
 
-app.route('/api/data')
-	.get(dataHelpers.getData)
-	.post(dataHelpers.createData)
-	.delete(dataHelpers.deleteData);
-
-app.route('/api/data/:id')
-	.get(dataHelpers.getOneData)
-	.put(dataHelpers.editData)
-	.delete(dataHelpers.deleteOneData);
+// app.route('/api/data/:id')
+// 	.get(dataHelpers.getOneData)
+// 	.put(dataHelpers.editData)
+// 	.delete(dataHelpers.deleteOneData);
 
 app.route('/api/setting')
 	.get(settingsHelpers.getSettings)
