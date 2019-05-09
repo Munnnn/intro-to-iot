@@ -12,8 +12,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 /******** Router ********/
-//app.use('/', indexRoutes);
-//app.use('/api', apiRoutes);
+app.use('/', indexRoutes);
+app.use('/api', apiRoutes);
 
 app.listen(app.get('port'), () => console.log('Listening on port ' + app.get('port')));
 
