@@ -5,7 +5,7 @@ var express		= require('express'),
 var dataHelpers		=require('./helpers/data'),
 
 var indexRoutes	= require('./routes/index'),
-	apiRoutes	= require('./routes/api');
+	// apiRoutes	= require('./routes/api');
 
 app.set('port', (process.env.PORT || 3000));
 app.set('view engine', 'ejs');
@@ -21,6 +21,7 @@ app.use('/', indexRoutes);
 
 
 app.get('/api/data', (req,res) => {
+	console.log("hello world....")
 	res.send("hello world!");
 });
 
