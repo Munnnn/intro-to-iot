@@ -34,7 +34,7 @@ exports.deleteData = function(req, res) {
 	});
 }
 
-exports.getOneDate = function(req, res) {
+exports.getOneData = function(req, res) {
 	db.Data.findById(req.params.id)
 	.then (function(foundData) {
 		res.json(foundData);
@@ -54,10 +54,10 @@ exports.editData = function(req, res) {
 	});
 }
 
-exports.delectOneData = function(req, res) {
+exports.deleteOneData = function(req, res) {
 	db.Data.remove( {_id: req.params.id})
-	.then ( function() {
-		res.json( { message: 'Succesfully deleted'})
+	.then( function() {
+		res.json( {message: 'Succesfully deleted'});
 	})
 	.catch( function(err) {
 		res.send(err);
