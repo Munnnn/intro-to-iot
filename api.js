@@ -8,7 +8,7 @@ var indexRoutes	= require('./routes/index'),
 app.set('port', (process.env.PORT || 3000));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/assets'));
-app.use(bodyParser.json());
+app.use(bodyParser.json(), { useNewUrlParser: true });
 app.use(bodyParser.urlencoded({extended: true}));
 
 /*****Routes*****/

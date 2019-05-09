@@ -4,7 +4,7 @@ var mongoose 	= require('mongoose');
 dotenv.config();
 
 mongoose.set('debug', true);
-mongoose.connect(process.env.DATABASE);
+mongoose.connect(process.env.DATABASE, { useNewUrlParser: true });
 mongoose.promise = Promise;
 
 module.exports.Settings = require('./settings');

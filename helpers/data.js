@@ -3,9 +3,11 @@ var db = require('../models');
 exports.getData = function(req, res) {
 	db.Data.find()
 	.then( function(data) {
+		res.json( { message: 'creaating data'})
 		res.json(data);
 	})
 	.catach( function(err) {
+		res.json( { message: 'error'})
 		res.send(err);
 	})
 }
@@ -13,9 +15,12 @@ exports.getData = function(req, res) {
 exports.createData = function(req, res) {
 	db.Data.create(req.body)
 	.then (function(newData) {
+		res.json( { message: 'creaating data'})
 		res.json(newData);
 	})
 	.catch (function(err) {
+		res.json( { message: 'error'})
+
 		res.send(err);
 	});
 }

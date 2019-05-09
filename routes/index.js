@@ -109,7 +109,7 @@ router.post('/configure', (req, res) => {
 	});
 });
 
-/*
+
 router.get('/seed/:temp/:hum/:bright', (req,res) => {
 	var seed = {
 		temperature: req.params.temp,
@@ -147,6 +147,6 @@ router.get('/seedStats', (req,res) => {
 		res.send(err);
 	})
 });
-*/
+
 
 module.exports = router;
