@@ -14,7 +14,7 @@ var express			=require('express'),
 
 
 router.route('/data')
-	.get(console.log("hello"))
+	.get(dataHelpers.getData)
 	.post(dataHelpers.createData)
 	.delete(dataHelpers.deleteData);
 

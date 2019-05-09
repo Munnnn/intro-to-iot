@@ -9,8 +9,9 @@ router.get('/', (req, res) => {
 	db.Settings.findOne({})
 	.then( function(result) {
 		//res.render('home', {settings: result});
-		console.log('settings found');
+		console.log('settings found:');
 		setting = result;
+		console.log(setting)
 		return db.Stats.findOne({})
 	})
 	.then( function(statResult) {
@@ -72,7 +73,7 @@ router.post('/set-color', (req,res) => {
 db.Settings.findOne({})
 .then( function(result) {
 	var setting = {
-		'lightColor': req.body.color,
+		'lightColor': 'fff453',
 		'lightIsOn': true
 	}
 
