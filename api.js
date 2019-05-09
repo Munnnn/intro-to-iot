@@ -21,7 +21,6 @@ app.use('/', indexRoutes);
 
 
 app.get('/api/data', (req,res) => {
-	console.log("hello world....")
 	res.send("hello world!");
 });
 

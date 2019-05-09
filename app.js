@@ -3,6 +3,7 @@ var	express		= require('express'),
 	app			=express();
 
 var indexRoutes = require('./routes/index');
+	apiRoutes	= require('./routes/api');
 
 app.set('port', (process.env.PORT || 3000));
 app.set('view engine', 'ejs'); 
@@ -12,6 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 /******** Router ********/
 app.use('/', indexRoutes);
+app.use('/api', apiRoutes);
 
 app.listen(app.get('port'), () => console.log('Listening on port ' + app.get('port')));
 
