@@ -24,7 +24,7 @@
 	<div class='ui three small gray statistics'>
 		<div class='statistic'>
 			<div class='value'>
-				<%= stats.avgTemperature %> &degC
+				<%= stats.avgTemperature %> &deg;C
 			</div>
 			<div class='label'>
 				Avg Tempreature
@@ -76,12 +76,12 @@
 <form class='ui form' action='/configure' method='post'>
 	<div class='fields'>
 		<div class='four wide field'>
-			<label> Hot (&degC) </label>
+			<label> Hot (&deg;C) </label>
 			<input type='number' name='setting[hotThreshold]' value='<%= settings.hotThreshold %>'>
 		</div>
 
 		<div class='four wide field'>
-			<label> Cold (&degC) </label>
+			<label> Cold (&deg;C) </label>
 			<input type='number' name='setting[coldThreshold]' value='<%= settings.coldThreshold %>'>
 		</div>
 
