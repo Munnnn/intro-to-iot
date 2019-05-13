@@ -73,7 +73,7 @@ router.post('/set-color', (req,res) => {
 db.Settings.findOne({})
 .then( function(result) {
 	var setting = {
-		'lightColor': 'fff453',
+		'lightColor': req.body.color,
 		'lightIsOn': true
 	}
 
