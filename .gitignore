@@ -1,9 +1,0 @@
-#node_modules
-data
-#.env
-*.wt
-*.turtle
-*.lock
-*.data
-*.bson
-WiredTiger
